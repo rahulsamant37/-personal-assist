@@ -1,36 +1,113 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Personal Assist
+
+Personal Assist is a Next.js project designed to provide a personal assistant experience. It integrates with Google Calendar, Gmail, and other services to help you manage your schedule, send emails, and set reminders.
+
+## Features
+
+- **Google Calendar Integration**: Schedule and manage your events directly from the app.
+- **Gmail Integration**: Draft and send emails using your Gmail account.
+- **Reminders**: Set and manage reminders for important tasks.
+- **Chat Interface**: Interact with the assistant through a chat interface.
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+
+- Node.js (v14.x or later)
+- npm (v6.x or later) or yarn (v1.x or later)
+- PostgreSQL database
+
+### Installation
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/rahulsamant37/personal-assist.git
+   cd personal-assist
+   ```
+
+2. Install dependencies:
+
+   ```bash
+   npm install
+   # or
+   yarn install
+   ```
+
+3. Set up environment variables:
+
+   Create a `.env.local` file in the root directory and add the following variables:
+
+   ```env
+   DATABASE_URL=your_database_url
+   DIRECT_URL=your_direct_url
+   AUTH_SECRET=your_auth_secret
+   ```
+
+4. Run database migrations:
+
+   ```bash
+   npm run migrate
+   ```
+
+### Running the Development Server
+
+Start the development server:
 
 ```bash
 npm run dev
 # or
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Building for Production
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Build the project for production:
 
-## Learn More
+```bash
+npm run build
+# or
+yarn build
+```
 
-To learn more about Next.js, take a look at the following resources:
+Start the production server:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+npm start
+# or
+yarn start
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Deployment
 
-## Deploy on Vercel
+### Deploying on Vercel
 
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. Push your code to a Git repository.
+2. Go to [Vercel](https://vercel.com) and create a new project.
+3. Import your Git repository.
+4. Set up environment variables in the Vercel dashboard.
+5. Deploy your project.
+
+For more details, check out the [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying).
+
+## Contributing
+
+We welcome contributions to the project! To contribute, follow these steps:
+
+1. Fork the repository.
+2. Create a new branch for your feature or bugfix.
+3. Make your changes and commit them with descriptive messages.
+4. Push your changes to your fork.
+5. Create a pull request to the main repository.
+
+## Reporting Issues
+
+If you encounter any issues or have suggestions for improvements, please open an issue on the [GitHub repository](https://github.com/rahulsamant37/personal-assist/issues).
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
